@@ -1,0 +1,31 @@
+{
+  "name": "sketch-module-web-view",
+  "version": "0.1.0",
+  "description": "A sketch module for creating an complex UI with a webview",
+  "main": "index.js",
+  "dependencies": {
+    "mocha-js-delegate": "^0.1.0"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathieudutour/sketch-module-web-view.git"
+  },
+  "keywords": [
+    "sketch",
+    "module",
+    "webview",
+    "ui"
+  ],
+  "author": "Mathieu Dutour <mathieu@dutour.me> (http://mathieu.dutour.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mathieudutour/sketch-module-web-view/issues"
+  },
+  "homepage": "https://github.com/mathieudutour/sketch-module-web-view#readme"
+}
