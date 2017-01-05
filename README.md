@@ -33,7 +33,7 @@ const options = {
   uiDelegate: {} // https://developer.apple.com/reference/webkit/webuidelegate?language=objc
 }
 
-const { panel, delegate, webView } = new WebUI(context, 'path-in-resource-folder.html', options)
+const webUI = new WebUI(context, 'path-in-resource-folder.html', options)
 ```
 
 ## Communicating with the webview
@@ -41,7 +41,7 @@ const { panel, delegate, webView } = new WebUI(context, 'path-in-resource-folder
 ### Executing JS on the webview from the plugin
 
 ```js
-const res = webView.stringByEvaluatingJavaScriptFromString('someJSFunction()')
+const res = webUI.eval('someJSFunction()')
 ```
 
 ### Executing JS in the plugin from the webview

@@ -84,7 +84,7 @@ function WebUI (context, htmlName, options) {
 
   return {
     panel: panel,
-    delegate: delegate,
+    eval: webView.stringByEvaluatingJavaScriptFromString,
     webView: webView
   }
 }
