@@ -61,3 +61,6 @@ import pluginCall from 'sketch-module-web-view/client'
 
 pluginCall('nativeLog', 'Called from the webview')
 ```
+
+⚠️  When using `options.handlers`, the `webView:didChangeLocationWithinPageForFrame:` method of the `frameLoadDelegate` will be overwritten.
+⚠️  When calling `pluginCall`, the window.location.hash will be modified.
