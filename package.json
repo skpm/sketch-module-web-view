@@ -1,10 +1,10 @@
 {
   "name": "sketch-module-web-view",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A sketch module for creating an complex UI with a webview",
   "main": "lib/index.js",
   "dependencies": {
-    "mocha-js-delegate": "^0.1.0"
+    "mocha-js-delegate": "^0.1.1"
   },
   "devDependencies": {
     "standard": "^8.6.0"
