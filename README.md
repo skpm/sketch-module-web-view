@@ -1,9 +1,9 @@
 # sketch-module-web-view
 
-A sketch module for creating an complex UI with a webview.
+A Sketch module for creating a complex UI with a webview.
 
 ## Installation
-
+To use this module in your Sketch plugin you need a bundler utility like [skpm](https://github.com/skpm/skpm) and add it as a dependency:
 ```bash
 npm i -S sketch-module-web-view
 ```
