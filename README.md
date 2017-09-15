@@ -21,16 +21,19 @@ const options = {
   height: 180,
   background: NSColor.whiteColor(),
   onlyShowCloseButton: false,
-  title: 'my ui',
+  title: 'My ui',
   hideTitleBar: false,
   shouldKeepAround: true,
   frameLoadDelegate: { // https://developer.apple.com/reference/webkit/webframeloaddelegate?language=objc
     'webView:didFinishLoadForFrame:': function (webView, webFrame) {
-        context.document.showMessage('UI loaded!')
-        WebUI.clear()
+      context.document.showMessage('UI loaded!')
+      WebUI.clear()
     }
   },
-  uiDelegate: {} // https://developer.apple.com/reference/webkit/webuidelegate?language=objc
+  uiDelegate: {}, // https://developer.apple.com/reference/webkit/webuidelegate?language=objc
+  onPanelClose: function () {
+    // Stuff
+  }
 }
 
 const webUI = new WebUI(context, 'path-in-resource-folder.html', options)
