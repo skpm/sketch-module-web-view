@@ -27,7 +27,7 @@ const options = {
   frameLoadDelegate: { // https://developer.apple.com/reference/webkit/webframeloaddelegate?language=objc
     'webView:didFinishLoadForFrame:': function (webView, webFrame) {
       context.document.showMessage('UI loaded!')
-      WebUI.clear()
+      WebUI.clean()
     }
   },
   uiDelegate: {}, // https://developer.apple.com/reference/webkit/webuidelegate?language=objc
