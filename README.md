@@ -36,7 +36,7 @@ const options = {
   }
 }
 
-const webUI = new WebUI(context, 'path-in-resource-folder.html', options)
+const webUI = new WebUI(context, require('./my-screen.html'), options)
 ```
 
 ## Communicating with the webview
