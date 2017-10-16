@@ -20,6 +20,7 @@ const options = {
   width: 240,
   height: 180,
   background: NSColor.whiteColor(),
+  blurredBackground: false,
   onlyShowCloseButton: false,
   title: 'My ui',
   hideTitleBar: false,
@@ -33,6 +34,7 @@ const options = {
   uiDelegate: {}, // https://developer.apple.com/reference/webkit/webuidelegate?language=objc
   onPanelClose: function () {
     // Stuff
+    // return `false` to prevent closing the panel
   }
 }
 
