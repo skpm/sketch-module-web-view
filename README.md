@@ -25,6 +25,7 @@ const options = {
   title: 'My ui',
   hideTitleBar: false,
   shouldKeepAround: true,
+  resizable: false,
   frameLoadDelegate: { // https://developer.apple.com/reference/webkit/webframeloaddelegate?language=objc
     'webView:didFinishLoadForFrame:': function (webView, webFrame) {
       context.document.showMessage('UI loaded!')
