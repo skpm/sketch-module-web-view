@@ -3,7 +3,9 @@
 A Sketch module for creating a complex UI with a webview.
 
 ## Installation
+
 To use this module in your Sketch plugin you need a bundler utility like [skpm](https://github.com/skpm/skpm) and add it as a dependency:
+
 ```bash
 npm i -S sketch-module-web-view
 ```
@@ -48,6 +50,16 @@ const webUI = new WebUI(context, require('./my-screen.html'), options)
 
 ```js
 const res = webUI.eval('someJSFunction()')
+```
+
+### Executing JS on the webview from the another plugin or command
+
+```js
+import { isWebviewPresent, sendToWebview } from 'sketch-module-web-view/remote'
+
+if (isWebviewPresent('unique.id')) {
+  sendToWebview('unique.id', 'someJSFunction()')
+}
 ```
 
 ### Executing JS in the plugin from the webview
