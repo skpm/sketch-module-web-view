@@ -7,7 +7,7 @@ module.exports.isWebviewPresent = function isWebviewPresent (identifier) {
 }
 
 module.exports.sendToWebview = function sendToWebview (identifier, evalString) {
-  if (!module.exports.isWebviewPresent()) {
+  if (!module.exports.isWebviewPresent(identifier)) {
     throw new Error('Webview ' + identifier + ' not found')
   }
 
