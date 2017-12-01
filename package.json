@@ -1,10 +1,10 @@
 {
   "name": "sketch-module-web-view",
-  "version": "0.2.6",
+  "version": "1.0.0",
   "description": "A sketch module for creating an complex UI with a webview",
   "main": "lib/index.js",
   "dependencies": {
-    "mocha-js-delegate": "^0.1.1"
+    "cocoascript-class": "*"
   },
   "devDependencies": {
     "standard": "^8.6.0"

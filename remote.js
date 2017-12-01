@@ -11,10 +11,7 @@ module.exports.sendToWebview = function sendToWebview (identifier, evalString) {
     throw new Error('Webview ' + identifier + ' not found')
   }
 
-  var webview = threadDictionary[identifier]
-    .contentView()
-    .subviews()
-  webview = webview[webview.length - 1]
+  var browserView = threadDictionary[identifier]
 
-  return webview.stringByEvaluatingJavaScriptFromString(evalString)
+  return browserView.webContents.executeJavaScript(evalString)
 }
