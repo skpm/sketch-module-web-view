@@ -31,7 +31,7 @@ export default function () {
 ### Executing JS on the webview from the plugin
 
 ```js
-const res = browserWindow.webContent.executeJavaScript('someJSFunction()')
+const res = browserWindow.webContents.executeJavaScript('someJSFunction()')
 ```
 
 ### Executing JS on the webview from the another plugin or command
@@ -48,7 +48,7 @@ if (isWebviewPresent('unique.id')) {
 
 On the plugin:
 ```js
-browserWindow.webContent.on('nativeLog', function (s) {
+browserWindow.webContents.on('nativeLog', function (s) {
   context.document.showMessage(s)
 }
 ```
