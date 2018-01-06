@@ -50,7 +50,7 @@ On the plugin:
 ```js
 browserWindow.webContents.on('nativeLog', function (s) {
   context.document.showMessage(s)
-}
+})
 ```
 
 On the webview:
