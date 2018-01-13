@@ -4,6 +4,7 @@
   "description": "A sketch module for creating an complex UI with a webview",
   "main": "lib/index.js",
   "dependencies": {
+    "@skpm/events": "^0.1.1",
     "cocoascript-class": "*"
   },
   "devDependencies": {
