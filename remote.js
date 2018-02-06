@@ -2,16 +2,20 @@
 
 var threadDictionary = NSThread.mainThread().threadDictionary()
 
+module.exports.getWebview = function getWebview (identifier) {
+  return threadDictionary[identifier]
+}
+
 module.exports.isWebviewPresent = function isWebviewPresent (identifier) {
-  return !!threadDictionary[identifier]
+  return !!module.exports.getWebview(identifier)
 }
 
 module.exports.sendToWebview = function sendToWebview (identifier, evalString) {
-  if (!module.exports.isWebviewPresent(identifier)) {
+  var browserView = module.exports.getWebview(identifier)
+
+  if (!browserView) {
     throw new Error('Webview ' + identifier + ' not found')
   }
-
-  var browserView = threadDictionary[identifier]
 
   return browserView.webContents.executeJavaScript(evalString)
 }
