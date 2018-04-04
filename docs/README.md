@@ -10,11 +10,6 @@ To use this module in your Sketch plugin you need a bundler utility like [skpm](
 npm install -S sketch-module-web-view
 ```
 
-## Documentation
-
-* [Communicating between the Plugin and the WebView](./communication-plugin-webview.md)
-* [Inspecting the WebView](./inspecting-the-webview.md)
-
 ## Usage
 
 ```js
@@ -30,6 +25,17 @@ export default function() {
   browserWindow.loadURL('./my-screen.html')
 }
 ```
+
+## Documentation
+
+* [Communicating between the Plugin and the WebView](/docs/communication-plugin-webview.md)
+* [Inspecting the WebView](/docs/inspecting-the-webview.md)
+* [Frameless-window](/docs/frameless-window.md)
+
+## API References
+
+* [Browser window](/docs/browser-window.md)
+* [Web Content](/docs/web-content.md)
 
 ## License
 
