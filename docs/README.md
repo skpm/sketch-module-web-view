@@ -35,7 +35,7 @@ export default function() {
 ## API References
 
 * [Browser window](/docs/browser-window.md)
-* [Web Content](/docs/web-content.md)
+* [Web Contents](/docs/web-contents.md)
 
 ## License
 
