@@ -82,6 +82,7 @@ globals:
   NSMutableDictionary: false
   arguments: false
   window: false
+  NSFullSizeContentViewWindowMask: false
 
 rules:
   ###########
@@ -116,8 +117,3 @@ rules:
       trailingComma: es5
       semi: false
       parser: typescript
-  no-restricted-syntax:
-    - error
-    # no-default-export
-    - selector: ExportDefaultDeclaration
-      message: Use of default exports is forbidden
