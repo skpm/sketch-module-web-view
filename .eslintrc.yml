@@ -1,0 +1,119 @@
+root: true
+extends:
+  - airbnb-base
+  - prettier
+plugins:
+  - prettier
+
+globals:
+  __command: false
+  NSApplication: false
+  NSApp: false
+  NSMakeRect: false
+  NSScreen: false
+  NSColor: false
+  NSClosableWindowMask: false
+  NSFullScreenWindowMask: false
+  NSWindowZoomButton: false
+  NSFloatingWindowLevel: false
+  NSMakeSize: false
+  NSHeight: false
+  NSMiniaturizableWindowMask: false
+  NSWindowCollectionBehaviorFullScreenPrimary: false
+  NSVisualEffectView: false
+  NSWindowCollectionBehaviorFullScreenAuxiliary: false
+  NSNormalWindowLevel: false
+  NSVisualEffectBlendingModeBehindWindow: false
+  CGWindowLevelForKey: false
+  kCGMaximumWindowLevelKey: false
+  kCGMinimumWindowLevelKey: false
+  NSTornOffMenuWindowLevel: false
+  NSModalPanelWindowLevel: false
+  NSMainMenuWindowLevel: false
+  NSResizableWindowMask: false
+  NSStatusWindowLevel: false
+  NSPopUpMenuWindowLevel: false
+  NSScreenSaverWindowLevel: false
+  NSDockWindowLevel: false
+  NSInformationalRequest: false
+  NSWindowCollectionBehaviorCanJoinAllSpaces: false
+  NSWindowSharingNone: false
+  NSWindowSharingReadOnly: false
+  NSViewWidthSizable: false
+  NSViewHeightSizable: false
+  NSVisualEffectStateActive: false
+  NSWindowBelow: false
+  NSVisualEffectMaterialLight: false
+  NSVisualEffectMaterialAppearanceBased: false
+  NSVisualEffectMaterialDark: false
+  NSVisualEffectMaterialTitlebar: false
+  NSVisualEffectMaterialSelection: false
+  NSVisualEffectMaterialMenu: false
+  NSVisualEffectMaterialPopover: false
+  NSVisualEffectMaterialSidebar: false
+  NSVisualEffectMaterialMediumLight: false
+  NSVisualEffectMaterialUltraDark: false
+  NSWindowAbove: false
+  NSDictionary: false
+  NSLayoutConstraint: false
+  NSLayoutRelationEqual: false
+  NSLayoutAttributeLeft: false
+  NSLayoutAttributeTop: false
+  NSLayoutAttributeRight: false
+  NSLayoutAttributeBottom: false
+  NSUUID: false
+  NSThread: false
+  coscript: false
+  NSWidth: false
+  NSTitledWindowMask: false
+  NSTexturedBackgroundWindowMask: false
+  NSPanel: false
+  NSBackingStoreBuffered: false
+  WebView: false
+  kCGDesktopWindowLevel: false
+  NSWindowCollectionBehaviorStationary: false
+  NSWindowCollectionBehaviorIgnoresCycle: false
+  NSWindowTitleHidden: false
+  NSToolbar: false
+  NSWindowFullScreenButton: false
+  NSWindowMiniaturizeButton: false
+  NSWindowCloseButton: false
+  NSEventTypeLeftMouseDown: false
+  NSMutableDictionary: false
+  arguments: false
+  window: false
+  NSFullSizeContentViewWindowMask: false
+
+rules:
+  ###########
+  # PLUGINS #
+  ###########
+
+  ###########
+  # BUILTIN #
+  ###########
+  prefer-rest-params: off
+  prefer-arrow-callback: off
+  no-var: off
+  vars-on-top: off
+  func-names: off
+  no-param-reassign: off
+  no-bitwise: off
+  prefer-destructuring: off
+  object-shorthand: off
+  prefer-template: off
+  no-underscore-dangle: off
+  class-methods-use-this: warn
+  no-useless-constructor: warn
+  eqeqeq: off
+  strict: off
+
+  ###########
+  # SPECIAL #
+  ###########
+  prettier/prettier:
+    - error
+    - singleQuote: true
+      trailingComma: es5
+      semi: false
+      parser: typescript
