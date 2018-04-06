@@ -804,14 +804,6 @@ Controls whether to hide cursor when typing.
 
 Adds a vibrancy effect to the browser window. Passing `null` or an empty string will remove the vibrancy effect on the window.
 
-#### `win.setTouchBar(touchBar)` _Experimental_
-
-* `touchBar` TouchBar
-
-Sets the touchBar layout for the current window. Specifying `null` or `undefined` clears the touch bar. This method only has an effect if the machine has a touch bar and is running on macOS 10.12.1+.
-
-**Note:** The TouchBar API is currently experimental and may change or be removed in future Electron releases.
-
 [blink-feature-string]: https://cs.chromium.org/chromium/src/third_party/WebKit/Source/platform/runtime_enabled_features.json5?l=70
 [page-visibility-api]: https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
 [quick-look]: https://en.wikipedia.org/wiki/Quick_Look
