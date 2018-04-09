@@ -58,10 +58,12 @@ On the webview:
 import pluginCall from 'sketch-module-web-view/client'
 
 pluginCall('nativeLog', 'Called from the webview')
-```
 
-> ⚠️ `pluginCall` is a bit of a hack.
->
-> When calling `pluginCall`, the window.location.hash will be modified. The WebView is actually listening to a change of the location. That's the only way to communicate back.
->
-> You can check what it is actually doing [here](../client.js), the code is fairly simple
+// you can pass any argument that can be stringified
+pluginCall('nativeLog', {
+  a: b,
+})
+
+// you can also pass multiple arguments
+pluginCall('nativeLog', 1, 2, 3)
+```
