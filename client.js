@@ -1,4 +1,4 @@
-var { JS_BRIDGE } = require('./lib/constants')
+var JS_BRIDGE = require('./lib/constants').JS_BRIDGE
 
 module.exports = function(actionName) {
   if (!actionName) {
