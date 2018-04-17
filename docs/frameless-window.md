@@ -61,6 +61,11 @@ let win = new BrowserWindow({ transparent: true, frame: false })
 win.show()
 ```
 
+### Notes
+
+* Any background color set on <html> or <body> will leak to the whole window, even if they are sized smaller than the window.
+* To create a "square" corners effect, size a <div> 5px or so shorter than the actual transparent window height and give it a background color.
+
 ### Limitations
 
 * You can not click through the transparent area. We are going to introduce an API to set window shape to solve this, see [our issue](https://github.com/electron/electron/issues/1335) for details.
