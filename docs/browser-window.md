@@ -109,7 +109,7 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
   * `minimizable` Boolean (optional) - Whether window is minimizable. Default is `true`.
   * `maximizable` Boolean (optional) - Whether window is maximizable. Default is `true`.
   * `closable` Boolean (optional) - Whether window is closable. Default is `true`.
-  * `focusable` Boolean (optional) - Whether the window can be focused. Default is `true`.
+    <!-- * `focusable` Boolean (optional) - Whether the window can be focused. Default is `true`. -->
   * `alwaysOnTop` Boolean (optional) - Whether the window should always stay on top of other windows. Default is `false`.
   * `fullscreen` Boolean (optional) - Whether the window should show in fullscreen. When explicitly set to `false` the fullscreen button will be hidden or disabled. Default is `false`.
   * `fullscreenable` Boolean (optional) - Whether the window can be put into fullscreen mode. Also whether the maximize/zoom button should toggle full screen mode or maximize window. Default is `true`.
