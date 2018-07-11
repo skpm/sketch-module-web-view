@@ -69,7 +69,7 @@ globals:
   NSTexturedBackgroundWindowMask: false
   NSPanel: false
   NSBackingStoreBuffered: false
-  WebView: false
+  WKWebView: false
   kCGDesktopWindowLevel: false
   NSWindowCollectionBehaviorStationary: false
   NSWindowCollectionBehaviorIgnoresCycle: false
@@ -83,6 +83,14 @@ globals:
   arguments: false
   window: false
   NSFullSizeContentViewWindowMask: false
+  CGRectMake: false
+  WKWebViewConfiguration: false
+  NSURLRequest: false
+  NSURL: false
+  __mocha__: false
+  CGPointMake: false
+  WKUserScript: false
+  NSURLCredential: false
 
 rules:
   ###########

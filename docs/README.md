@@ -10,6 +10,8 @@ To use this module in your Sketch plugin you need a bundler utility like [skpm](
 npm install -S sketch-module-web-view
 ```
 
+_The version 2.x is only compatible with Sketch >= 51. If you need compatibility with previous versions of Sketch, use the version 1.x_
+
 ## Usage
 
 ```js

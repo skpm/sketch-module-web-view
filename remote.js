@@ -10,12 +10,16 @@ module.exports.isWebviewPresent = function isWebviewPresent(identifier) {
   return !!module.exports.getWebview(identifier)
 }
 
-module.exports.sendToWebview = function sendToWebview(identifier, evalString) {
+module.exports.sendToWebview = function sendToWebview(
+  identifier,
+  evalString,
+  callback
+) {
   var browserView = module.exports.getWebview(identifier)
 
   if (!browserView) {
     throw new Error('Webview ' + identifier + ' not found')
   }
 
-  return browserView.webContents.executeJavaScript(evalString)
+  return browserView.webContents.executeJavaScript(evalString, callback)
 }
