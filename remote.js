@@ -1,13 +1,18 @@
 /* globals NSThread */
+var BrowserWindow = require('./lib')
 
 var threadDictionary = NSThread.mainThread().threadDictionary()
 
 module.exports.getWebview = function getWebview(identifier) {
-  return threadDictionary[identifier]
+  var panel = threadDictionary[identifier]
+  if (!panel) {
+    return undefined
+  }
+  return BrowserWindow.fromPanel(panel, identifier)
 }
 
 module.exports.isWebviewPresent = function isWebviewPresent(identifier) {
-  return !!module.exports.getWebview(identifier)
+  return !!threadDictionary[identifier]
 }
 
 module.exports.sendToWebview = function sendToWebview(
