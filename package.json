@@ -1,6 +1,6 @@
 {
   "name": "sketch-module-web-view",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "A sketch module for creating an complex UI with a webview",
   "main": "lib/index.js",
   "dependencies": {
