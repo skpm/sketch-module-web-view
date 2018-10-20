@@ -3,13 +3,7 @@ var BrowserWindow = require('./lib')
 
 var threadDictionary = NSThread.mainThread().threadDictionary()
 
-module.exports.getWebview = function getWebview(identifier) {
-  var panel = threadDictionary[identifier]
-  if (!panel) {
-    return undefined
-  }
-  return BrowserWindow.fromPanel(panel, identifier)
-}
+module.exports.getWebview = BrowserWindow.fromId
 
 module.exports.isWebviewPresent = function isWebviewPresent(identifier) {
   return !!threadDictionary[identifier]
