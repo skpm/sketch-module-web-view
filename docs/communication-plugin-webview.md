@@ -19,9 +19,11 @@ window.someGlobalFunctionDefinedInTheWebview = function(arg) {
 On the plugin:
 
 ```js
-const res = browserWindow.webContents.executeJavaScript(
-  'someGlobalFunctionDefinedInTheWebview("hello")'
-)
+browserWindow.webContents
+  .executeJavaScript('someGlobalFunctionDefinedInTheWebview("hello")')
+  .then(res => {
+    // do something with the result
+  })
 ```
 
 ## Sending a message to the WebView from another plugin or command
@@ -55,15 +57,13 @@ browserWindow.webContents.on('nativeLog', function(s) {
 On the webview:
 
 ```js
-import pluginCall from 'sketch-module-web-view/client'
-
-pluginCall('nativeLog', 'Called from the webview')
+window.postMessage('nativeLog', 'Called from the webview')
 
 // you can pass any argument that can be stringified
-pluginCall('nativeLog', {
+window.postMessage('nativeLog', {
   a: b,
 })
 
 // you can also pass multiple arguments
-pluginCall('nativeLog', 1, 2, 3)
+window.postMessage('nativeLog', 1, 2, 3)
 ```
