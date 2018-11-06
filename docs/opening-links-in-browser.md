@@ -1,9 +1,10 @@
-# Opening a link from WebView in a default browser
+# Opening an external link in the default browser instead of the WebView
 
-It is impossible to open a link from WebView in external browser directly.
+A link with a `target="_blank"` will have no effect by default in the WebView. In order to open an external link, we will need to go through the Sketch Plugin.
+
 To achieve that you need 2 parts:
 
-1. In webview - intercept a click event on a link:
+1. In the WebView - intercept click events on a link:
 
 ```js
 function interceptClickEvent (event) {
@@ -18,11 +19,10 @@ function interceptClickEvent (event) {
 document.addEventListener('click', interceptClickEvent);
 ```
 
-2. In the host of the plugin - handle the opening:
+2. In the Sketch Plugin - handle the click:
 
 ```js
 webview.webContent.on('externalLinkClicked', url => {
     NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString(url))
 });
-
 ```
