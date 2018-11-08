@@ -107,8 +107,8 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
   - `title` String (optional) - Default window title. Default is your plugin name.
   - `show` Boolean (optional) - Whether window should be shown when created. Default is `true`.
   - `frame` Boolean (optional) - Specify `false` to create a [Frameless Window](frameless-window.md). Default is `true`.
-    <!-- * `parent` BrowserWindow (optional) - Specify parent window. Default is `null`.
-  - `modal` Boolean (optional) - Whether this is a modal window. This only works when the window is a child window. Default is `false`. -->
+  - `parent` Document (optional) - Specify parent [Document](https://developer.sketchapp.com/reference/api/#document). Default is `null`.
+  - `modal` Boolean (optional) - Whether this is a modal window. This only works when the window is a child window. Default is `false`.
   - `acceptFirstMouse` Boolean (optional) - Whether the web view accepts a single mouse-down event that simultaneously activates the window. Default is `false`.
   - `disableAutoHideCursor` Boolean (optional) - Whether to hide cursor when typing. Default is `false`.
   - `backgroundColor` String (optional) - Window's background color as a hexadecimal value, like `#66CD00` or `#FFF` or `#80FFFFFF` (alpha is supported). Default is `NSColor.windowBackgroundColor()`.
