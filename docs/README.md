@@ -30,15 +30,14 @@ export default function() {
 
 ## Documentation
 
-* [Communicating between the Plugin and the WebView](/docs/communication-plugin-webview.md)
-* [Inspecting the WebView](/docs/inspecting-the-webview.md)
-* [Frameless-window](/docs/frameless-window.md)
-* [Opening links in browser](/docs/opening-links-in-browser.md)
+- [Communicating between the Plugin and the WebView](/docs/communication-plugin-webview.md)
+- [Frameless-window](/docs/frameless-window.md)
+- [Opening links in browser](/docs/opening-links-in-browser.md)
 
 ## API References
 
-* [Browser window](/docs/browser-window.md)
-* [Web Contents](/docs/web-contents.md)
+- [Browser window](/docs/browser-window.md)
+- [Web Contents](/docs/web-contents.md)
 
 ## License
 

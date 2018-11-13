@@ -120,24 +120,25 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
     - `hidden` - Results in a hidden title bar and a full size content window, yet the title bar still has the standard window controls ("traffic lights") in the top left.
     - `hiddenInset` - Results in a hidden title bar with an alternative look where the traffic light buttons are slightly more inset from the window edge. <!-- * `customButtonsOnHover` Boolean (optional) - Draw custom close, minimize, and full screen buttons on macOS frameless windows. These buttons will not display unless hovered over in the top left of the window. These custom buttons prevent issues with mouse events that occur with the standard window toolbar buttons. **Note:** This option is currently experimental. -->
   - `vibrancy` String (optional) - Add a type of vibrancy effect to the window, only on macOS. Can be `appearance-based`, `light`, `dark`, `titlebar`, `selection`, `menu`, `popover`, `sidebar`, `medium-light` or `ultra-dark`. Please note that using `frame: false` in combination with a vibrancy value requires that you use a non-default `titleBarStyle` as well.
-    <!-- * `webPreferences` Object (optional) - Settings of web page's features.
-  - `devTools` Boolean (optional) - Whether to enable DevTools. If it is set to `false`, can not use `BrowserWindow.webContents.openDevTools()` to open DevTools. Default is `true`.
-  - `nodeIntegration` Boolean (optional) - Whether node integration is enabled. Default is `true`.
+  - `webPreferences` Object (optional) - Settings of web page's features.
+    - `devTools` Boolean (optional) - Whether to enable DevTools. If it is set to `false`, can not use `BrowserWindow.webContents.openDevTools()` to open DevTools. Default is `true`.
+    - `javascript` Boolean (optional) - Enables JavaScript support. Default is `true`.
+    - `plugins` Boolean (optional) - Whether plugins should be enabled. Default is `false`.
+    - `minimumFontSize` Integer (optional) - Defaults to `0`.
+    - `zoomFactor` Number (optional) - The default zoom factor of the page, `3.0` represents `300%`. Default is `1.0`.
+  <!-- - `nodeIntegration` Boolean (optional) - Whether node integration is enabled. Default is `true`.
   - `nodeIntegrationInWorker` Boolean (optional) - Whether node integration is enabled in web workers. Default is `false`. More about this can be found in [Multithreading](../tutorial/multithreading.md).
   - `preload` String (optional) - Specifies a script that will be loaded before other scripts run in the page. This script will always have access to node APIs no matter whether node integration is turned on or off. The value should be the absolute file path to the script. When node integration is turned off, the preload script can reintroduce Node global symbols back to the global scope. See example [here](process.md#event-loaded).
   - `sandbox` Boolean (optional) - If set, this will sandbox the renderer associated with the window, making it compatible with the Chromium OS-level sandbox and disabling the Node.js engine. This is not the same as the `nodeIntegration` option and the APIs available to the preload script are more limited. Read more about the option [here](sandbox-option.md). **Note:** This option is currently experimental and may change or be removed in future Electron releases.
   - `session` [Session](session.md#class-session) (optional) - Sets the session used by the page. Instead of passing the Session object directly, you can also choose to use the `partition` option instead, which accepts a partition string. When both `session` and `partition` are provided, `session` will be preferred. Default is the default session.
   - `partition` String (optional) - Sets the session used by the page according to the session's partition string. If `partition` starts with `persist:`, the page will use a persistent session available to all pages in the app with the same `partition`. If there is no `persist:` prefix, the page will use an in-memory session. By assigning the same `partition`, multiple pages can share the same session. Default is the default session.
   - `affinity` String (optional) - When specified, web pages with the same `affinity` will run in the same renderer process. Note that due to reusing the renderer process, certain `webPreferences` options will also be shared between the web pages even when you specified different values for them, including but not limited to `preload`, `sandbox` and `nodeIntegration`. So it is suggested to use exact same `webPreferences` for web pages with the same `affinity`.
-  - `zoomFactor` Number (optional) - The default zoom factor of the page, `3.0` represents `300%`. Default is `1.0`.
-  - `javascript` Boolean (optional) - Enables JavaScript support. Default is `true`.
   - `webSecurity` Boolean (optional) - When `false`, it will disable the same-origin policy (usually using testing websites by people), and set `allowRunningInsecureContent` to `true` if this options has not been set by user. Default is `true`.
   - `allowRunningInsecureContent` Boolean (optional) - Allow an https page to run JavaScript, CSS or plugins from http URLs. Default is `false`.
   - `images` Boolean (optional) - Enables image support. Default is `true`.
   - `textAreasAreResizable` Boolean (optional) - Make TextArea elements resizable. Default is `true`.
   - `webgl` Boolean (optional) - Enables WebGL support. Default is `true`.
   - `webaudio` Boolean (optional) - Enables WebAudio support. Default is `true`.
-  - `plugins` Boolean (optional) - Whether plugins should be enabled. Default is `false`.
   - `experimentalFeatures` Boolean (optional) - Enables Chromium's experimental features. Default is `false`.
   - `experimentalCanvasFeatures` Boolean (optional) - Enables Chromium's experimental canvas features. Default is `false`.
   - `scrollBounce` Boolean (optional) - Enables scroll bounce (rubber banding) effect on macOS. Default is `false`.
@@ -152,7 +153,6 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
     - `fantasy` String (optional) - Defaults to `Impact`.
   - `defaultFontSize` Integer (optional) - Defaults to `16`.
   - `defaultMonospaceFontSize` Integer (optional) - Defaults to `13`.
-  - `minimumFontSize` Integer (optional) - Defaults to `0`.
   - `defaultEncoding` String (optional) - Defaults to `ISO-8859-1`.
   - `backgroundThrottling` Boolean (optional) - Whether to throttle animations and timers when the page becomes background. This also affects the [Page Visibility API](#page-visibility). Defaults to `true`.
   - `offscreen` Boolean (optional) - Whether to enable offscreen rendering for the browser window. Defaults to `false`. See the [offscreen rendering tutorial](../tutorial/offscreen-rendering.md) for more details.
