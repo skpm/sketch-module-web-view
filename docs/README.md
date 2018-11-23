@@ -24,7 +24,7 @@ export default function() {
 
   const browserWindow = new BrowserWindow(options)
 
-  browserWindow.loadURL('./my-screen.html')
+  browserWindow.loadURL(require('./my-screen.html'))
 }
 ```
 
