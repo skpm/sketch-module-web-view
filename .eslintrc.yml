@@ -115,6 +115,7 @@ rules:
   no-useless-constructor: warn
   eqeqeq: off
   strict: off
+  prefer-spread: off
 
   ###########
   # SPECIAL #
