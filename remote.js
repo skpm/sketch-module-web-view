@@ -14,6 +14,22 @@ module.exports.sendToWebview = function sendToWebview(
   evalString,
   callback
 ) {
+  if (!module.exports.isWebviewPresent(identifier)) {
+    return undefined
+  }
+
+  // in case there is no callback, lightweight path
+  if (!callback) {
+    var panel = threadDictionary[identifier]
+    var webview = panel.contentView().subviews()[0]
+    if (webview || !webview.evaluateJavaScript_completionHandler) {
+      throw new Error('Webview ' + identifier + ' not found')
+    }
+
+    webview.evaluateJavaScript_completionHandler(evalString, null)
+    return undefined
+  }
+
   var browserView = module.exports.getWebview(identifier)
 
   if (!browserView) {
