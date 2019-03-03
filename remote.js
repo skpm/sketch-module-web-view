@@ -22,7 +22,7 @@ module.exports.sendToWebview = function sendToWebview(
   if (!callback) {
     var panel = threadDictionary[identifier]
     var webview = panel.contentView().subviews()[0]
-    if (webview || !webview.evaluateJavaScript_completionHandler) {
+    if (!webview || !webview.evaluateJavaScript_completionHandler) {
       throw new Error('Webview ' + identifier + ' not found')
     }
 
