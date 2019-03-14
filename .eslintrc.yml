@@ -91,6 +91,8 @@ globals:
   CGPointMake: false
   WKUserScript: false
   NSURLCredential: false
+  CGSizeMake: false
+  NSEvent: false
 
 rules:
   ###########
