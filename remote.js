@@ -1,40 +1,24 @@
 /* globals NSThread */
-var BrowserWindow = require('./lib')
-
 var threadDictionary = NSThread.mainThread().threadDictionary()
 
-module.exports.getWebview = BrowserWindow.fromId
+module.exports.getWebview = function(identifier) {
+  return require('./lib').fromId(identifier) // eslint-disable-line
+}
 
 module.exports.isWebviewPresent = function isWebviewPresent(identifier) {
   return !!threadDictionary[identifier]
 }
 
-module.exports.sendToWebview = function sendToWebview(
-  identifier,
-  evalString,
-  callback
-) {
+module.exports.sendToWebview = function sendToWebview(identifier, evalString) {
   if (!module.exports.isWebviewPresent(identifier)) {
-    return undefined
+    return
   }
 
-  // in case there is no callback, lightweight path
-  if (!callback) {
-    var panel = threadDictionary[identifier]
-    var webview = panel.contentView().subviews()[0]
-    if (!webview || !webview.evaluateJavaScript_completionHandler) {
-      throw new Error('Webview ' + identifier + ' not found')
-    }
-
-    webview.evaluateJavaScript_completionHandler(evalString, null)
-    return undefined
-  }
-
-  var browserView = module.exports.getWebview(identifier)
-
-  if (!browserView) {
+  var panel = threadDictionary[identifier]
+  var webview = panel.contentView().subviews()[0]
+  if (!webview || !webview.evaluateJavaScript_completionHandler) {
     throw new Error('Webview ' + identifier + ' not found')
   }
 
-  return browserView.webContents.executeJavaScript(evalString, callback)
+  webview.evaluateJavaScript_completionHandler(evalString, null)
 }

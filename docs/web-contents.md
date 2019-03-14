@@ -28,7 +28,7 @@ Emitted when the navigation is done, i.e. the spinner of the tab has stopped spi
 
 Returns:
 
-* `error` NSExpection
+- `error` Error
 
 This event is like `did-finish-load` but emitted when the load failed or was cancelled, e.g. `window.stop()` is invoked.
 
@@ -52,8 +52,8 @@ Emitted when the document in the given frame is loaded.
 
 Returns:
 
-* `event` Event
-* `url` String
+- `event` Event
+- `url` String
 
 Emitted when a user or the page wants to start navigation. It can happen when the `window.location` object is changed or a user clicks a link in the page.
 
@@ -65,8 +65,8 @@ It is also not emitted for in-page navigations, such as clicking anchor links or
 
 Returns:
 
-* `event` Event
-* `url` String
+- `event` Event
+- `url` String
 
 Emitted when an in-page navigation happened.
 
@@ -76,7 +76,7 @@ When in-page navigation happens, the page URL changes but does not cause navigat
 
 #### `contents.loadURL(url)`
 
-* `url` String
+- `url` String
 
 The `url` can be a remote address (e.g. `http://`) or a path to a local HTML file using the `file://` protocol.
 
@@ -131,13 +131,29 @@ Makes the browser go back a web page.
 
 Makes the browser go forward a web page.
 
-#### `contents.executeJavaScript(code)`
+#### `contents.executeJavaScript(code[, callback])`
 
-* `code` String
+- `code` String
+- `callback` Function (optional) - Called after script has been executed.
+  - `error` Error | null
+  - `result` Any
 
-Returns `any` - The result of the executed code.
+Returns `Promise<any>` - A promise that resolves with the result of the executed code or is rejected if the result of the code is a rejected promise (or if it fails to execute the code).
 
 Evaluates `code` in page.
+
+If the result of the executed code is a promise the callback result will be the resolved value of the promise. We recommend that you use the returned Promise to handle code that results in a Promise.
+
+```js
+contents
+  .executeJavaScript(
+    'fetch("https://jsonplaceholder.typicode.com/users/1").then(resp => resp.json())',
+    true
+  )
+  .then(result => {
+    console.log(result) // Will be the JSON object from the fetch call
+  })
+```
 
 #### `contents.undo()`
 
@@ -169,7 +185,7 @@ Executes the editing command `delete` in web page.
 
 #### `contents.replace(text)`
 
-* `text` String
+- `text` String
 
 Executes the editing command `replace` in web page.
 
