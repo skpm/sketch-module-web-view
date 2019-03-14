@@ -126,7 +126,7 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
     - `plugins` Boolean (optional) - Whether plugins should be enabled. Default is `false`.
     - `minimumFontSize` Integer (optional) - Defaults to `0`.
     - `zoomFactor` Number (optional) - The default zoom factor of the page, `3.0` represents `300%`. Default is `1.0`.
-  <!-- - `nodeIntegration` Boolean (optional) - Whether node integration is enabled. Default is `true`.
+      <!-- - `nodeIntegration` Boolean (optional) - Whether node integration is enabled. Default is `true`.
   - `nodeIntegrationInWorker` Boolean (optional) - Whether node integration is enabled in web workers. Default is `false`. More about this can be found in [Multithreading](../tutorial/multithreading.md).
   - `preload` String (optional) - Specifies a script that will be loaded before other scripts run in the page. This script will always have access to node APIs no matter whether node integration is turned on or off. The value should be the absolute file path to the script. When node integration is turned off, the preload script can reintroduce Node global symbols back to the global scope. See example [here](process.md#event-loaded).
   - `sandbox` Boolean (optional) - If set, this will sandbox the renderer associated with the window, making it compatible with the Chromium OS-level sandbox and disabling the Node.js engine. This is not the same as the `nodeIntegration` option and the APIs available to the preload script are more limited. Read more about the option [here](sandbox-option.md). **Note:** This option is currently experimental and may change or be removed in future Electron releases.
@@ -516,25 +516,34 @@ Consider a normal window with an HD video player and associated controls. Perhap
 
 #### `win.setBounds(bounds[, animate])`
 
-- `bounds` [Rectangle](structures/rectangle.md)
+- `bounds` [Rectangle](rectangle.md)
 - `animate` Boolean (optional)
 
-Resizes and moves the window to the supplied bounds
+Resizes and moves the window to the supplied bounds. Any properties that are not supplied will default to their current values.
+
+```js
+// set all bounds properties
+win.setBounds({ x: 440, y: 225, width: 800, height: 600 })
+// set a single bounds property
+win.setBounds({ width: 200 })
+// { x: 440, y: 225, width: 200, height: 600 }
+console.log(win.getBounds())
+```
 
 #### `win.getBounds()`
 
-Returns [`Rectangle`](structures/rectangle.md)
+Returns [`Rectangle`](rectangle.md)
 
 #### `win.setContentBounds(bounds[, animate])`
 
-- `bounds` [Rectangle](structures/rectangle.md)
+- `bounds` [Rectangle](rectangle.md)
 - `animate` Boolean (optional)
 
 Resizes and moves the window's client area (e.g. the web page) to the supplied bounds.
 
 #### `win.getContentBounds()`
 
-Returns [`Rectangle`](structures/rectangle.md)
+Returns [`Rectangle`](rectangle.md)
 
 #### `win.setEnabled(enable)`
 

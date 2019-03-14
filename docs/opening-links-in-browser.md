@@ -7,22 +7,22 @@ To achieve that you need 2 parts:
 1. In the WebView - intercept click events on a link:
 
 ```js
-function interceptClickEvent (event) {
-    const target = event.target.closest('a');
-    if (target && target.getAttribute('target') === '_blank') {
-        event.preventDefault();
-        window.postMessage('externalLinkClicked', target.href)
-    }
+function interceptClickEvent(event) {
+  const target = event.target.closest('a')
+  if (target && target.getAttribute('target') === '_blank') {
+    event.preventDefault()
+    window.postMessage('externalLinkClicked', target.href)
+  }
 }
 
 // listen for link click events at the document level
-document.addEventListener('click', interceptClickEvent);
+document.addEventListener('click', interceptClickEvent)
 ```
 
 2. In the Sketch Plugin - handle the click:
 
 ```js
 webview.webContent.on('externalLinkClicked', url => {
-    NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString(url))
-});
+  NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString(url))
+})
 ```
