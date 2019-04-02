@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.0.1
+
+- Fix hiding the background of the webview. This in turn fixes setting the vibrancy option.
+
 ## Version 3.0.0
 
 - Add `data-app-region` to be able to drag a div to move the window.
