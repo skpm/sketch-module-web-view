@@ -26,6 +26,18 @@ browserWindow.webContents
   })
 ```
 
+> Note that values passed to functions within `.executeJavaScript()` must be strings. To pass an object use `JSON.stringify()`
+>
+> For example :
+>  ```js
+>  let someObject = { a: "someValue", b: 5 }
+>  browserWindow.webContents
+>    .executeJavaScript(`someGlobalFunctionDefinedInTheWebview(${JSON.stringify(someObject)})`)
+>    .then(res => {
+>      // do something with the result
+>    })
+>  ```
+
 ## Sending a message to the WebView from another plugin or command
 
 If you do not have access to the WebView instance (because it was created in another command for example), you can still send a message by using the `id` used to create the WebView.
