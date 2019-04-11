@@ -38,7 +38,6 @@ browserWindow.webContents
 >    })
 >  ```
 
-
 ## Sending a message to the WebView from another plugin or command
 
 If you do not have access to the WebView instance (because it was created in another command for example), you can still send a message by using the `id` used to create the WebView.
