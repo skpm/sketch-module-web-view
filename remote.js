@@ -15,7 +15,14 @@ module.exports.sendToWebview = function sendToWebview(identifier, evalString) {
   }
 
   var panel = threadDictionary[identifier]
-  var webview = panel.contentView().subviews()[0]
+  var webview = null
+  var subviews = panel.contentView().subviews()
+  for (var i = 0; i < subviews.length; i += 1) {
+    if (!webview && subviews[i].isKindOfClass(WKWebView)) {
+      webview = subviews[i]
+    }
+  }
+
   if (!webview || !webview.evaluateJavaScript_completionHandler) {
     throw new Error('Webview ' + identifier + ' not found')
   }

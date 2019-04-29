@@ -10,6 +10,12 @@ To use this module in your Sketch plugin you need a bundler utility like [skpm](
 npm install -S sketch-module-web-view
 ```
 
+You can also use the [with-webview](https://github.com/skpm/with-webview) skpm template to have a solid base to start your project with a webview:
+
+```bash
+skpm create my-plugin-name --template=skpm/with-webview
+```
+
 _The version 2.x is only compatible with Sketch >= 51. If you need compatibility with previous versions of Sketch, use the version 1.x_
 
 ## Usage

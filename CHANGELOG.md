@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.0.2
+
+- Fix `sendToWebview` and `fromPanel` when the vibrancy option is set.
+
 ## Version 3.0.1
 
 - Fix hiding the background of the webview. This in turn fixes setting the vibrancy option.
