@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.0.3
+
+- Clear the webview context when closing the webview.
+
 ## Version 3.0.2
 
 - Fix `sendToWebview` and `fromPanel` when the vibrancy option is set.
