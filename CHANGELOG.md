@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.0.4
+
+- Fix `webContents.executeJavaScript`
+
 ## Version 3.0.3
 
 - Clear the webview context when closing the webview.
