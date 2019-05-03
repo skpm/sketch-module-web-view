@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.0.5
+
+- Fix `remote.sendToWebview` when the inspector was opened (Thanks @ig-robstoffers)
+
 ## Version 3.0.4
 
 - Fix `webContents.executeJavaScript`
