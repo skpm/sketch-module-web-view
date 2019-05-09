@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.0.6
+
+- Fix `webContents.executeJavaScript` when the script contains some escaped double quotes
+
 ## Version 3.0.5
 
 - Fix `remote.sendToWebview` when the inspector was opened (Thanks @ig-robstoffers)

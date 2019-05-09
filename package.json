@@ -7,6 +7,7 @@
     "mocha-js-delegate": "^0.2.0"
   },
   "devDependencies": {
+    "@skpm/test-runner": "^0.4.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.2.0",
@@ -17,7 +18,8 @@
     "prettier": "^1.17.0"
   },
   "scripts": {
-    "test": "npm run lint",
+    "test": "npm run lint && skpm-test",
+    "test:watch": "skpm-test --watch",
     "lint": "find . -name \"*.js\" | grep -v -f .gitignore | xargs eslint",
     "prettier:base": "prettier --write",
     "prettify": "find . -name \"*.js\" | grep -v -f .gitignore | xargs npm run prettier:base",
