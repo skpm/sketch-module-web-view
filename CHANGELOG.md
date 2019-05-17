@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.0.7
+
+- Fix the y coordinate of the first event of `acceptFirstClick`
+
 ## Version 3.0.6
 
 - Fix `webContents.executeJavaScript` when the script contains some escaped double quotes
