@@ -18,7 +18,11 @@ module.exports.sendToWebview = function sendToWebview(identifier, evalString) {
   var webview = null
   var subviews = panel.contentView().subviews()
   for (var i = 0; i < subviews.length; i += 1) {
-    if (!webview && !subviews[i].isKindOfClass(WKInspectorWKWebView) && subviews[i].isKindOfClass(WKWebView)) {
+    if (
+      !webview &&
+      !subviews[i].isKindOfClass(WKInspectorWKWebView) &&
+      subviews[i].isKindOfClass(WKWebView)
+    ) {
       webview = subviews[i]
     }
   }

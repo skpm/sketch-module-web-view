@@ -93,6 +93,7 @@ globals:
   NSURLCredential: false
   CGSizeMake: false
   NSEvent: false
+  WKInspectorWKWebView: false
 
 rules:
   ###########
