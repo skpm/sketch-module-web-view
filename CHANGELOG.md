@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 3.1.0
+
+- Fix the `webview.focus()` and `webview.blur()` methods not working
+- Fix the webview getting stuck to cursor on draggable area (Thanks @xsfour)
+
 ## Version 3.0.7
 
 - Fix the y coordinate of the first event of `acceptFirstClick`
