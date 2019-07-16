@@ -79,3 +79,6 @@ window.postMessage('nativeLog', {
 // you can also pass multiple arguments
 window.postMessage('nativeLog', 1, 2, 3)
 ```
+
+##### Note
+If you want to see `console.log` messages from inside your webview you can see this output from `Safari > Develop > {{Your Computer}} > {{Your Plugin}}``
