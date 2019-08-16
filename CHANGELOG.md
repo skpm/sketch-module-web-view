@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.1.2
+
+- Emit `uncaughtException` event if available (Sketch >=58) instead of throwing an error if there is an event listener
+
 ## Version 3.1.1
 
 - Correctly load file URLs when prepended with `file://` (Thanks @huw)
