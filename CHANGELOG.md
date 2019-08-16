@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.1.1
+
+- Correctly load file URLs when prepended with `file://` (Thanks @huw)
+
 ## Version 3.1.0
 
 - Fix the `webview.focus()` and `webview.blur()` methods not working
