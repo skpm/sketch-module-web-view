@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 3.1.3
+
+- allow windows to close on MacOS 10.15 (Thanks @robintindale)
+- fix production builds using URLs containing spaces (Thanks @robintindale)
+
 ## Version 3.1.2
 
 - Emit `uncaughtException` event if available (Sketch >=58) instead of throwing an error if there is an event listener
