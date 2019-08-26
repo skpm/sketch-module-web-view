@@ -94,6 +94,8 @@ globals:
   CGSizeMake: false
   NSEvent: false
   WKInspectorWKWebView: false
+  NSString: false
+  NSCharacterSet: false
 
 rules:
   ###########
