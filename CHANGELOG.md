@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 3.2.0
+
+- Fix some methods checking for the delegates' properties after rebuilding the window remotely.
+- Add `hidesOnDeactivate` option. Whether the window is removed from the screen when Sketch becomes inactive. Default is `true`.
+- Add `remembersWindowFrame` option. Whether to remember the position and the size of the window the next time. Defaults is `false`.
+
 ## Version 3.1.3
 
 - allow windows to close on MacOS 10.15 (Thanks @robintindale)
