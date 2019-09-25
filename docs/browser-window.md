@@ -89,6 +89,7 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
   - `height` Integer (optional) - Window's height in pixels. Default is `600`.
   - `x` Integer (optional) (**required** if y is used) - Window's left offset from screen. Default is to center the window.
   - `y` Integer (optional) (**required** if x is used) - Window's top offset from screen. Default is to center the window.
+  - `hidesOnDeactivate` Boolean (optional) - Whether the window is removed from the screen when Sketch becomes inactive. Default is `true`
   - `useContentSize` Boolean (optional) - The `width` and `height` would be used as web page's size, which means the actual window's size will include window frame's size and be slightly larger. Default is `false`.
   - `center` Boolean (optional) - Show window in the center of the screen.
   - `minWidth` Integer (optional) - Window's minimum width. Default is `0`.
@@ -120,13 +121,8 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
     - `hidden` - Results in a hidden title bar and a full size content window, yet the title bar still has the standard window controls ("traffic lights") in the top left.
     - `hiddenInset` - Results in a hidden title bar with an alternative look where the traffic light buttons are slightly more inset from the window edge. <!-- * `customButtonsOnHover` Boolean (optional) - Draw custom close, minimize, and full screen buttons on macOS frameless windows. These buttons will not display unless hovered over in the top left of the window. These custom buttons prevent issues with mouse events that occur with the standard window toolbar buttons. **Note:** This option is currently experimental. -->
   - `vibrancy` String (optional) - Add a type of vibrancy effect to the window, only on macOS. Can be `appearance-based`, `light`, `dark`, `titlebar`, `selection`, `menu`, `popover`, `sidebar`, `medium-light` or `ultra-dark`. Please note that using `frame: false` in combination with a vibrancy value requires that you use a non-default `titleBarStyle` as well.
-  - `webPreferences` Object (optional) - Settings of web page's features.
-    - `devTools` Boolean (optional) - Whether to enable DevTools. If it is set to `false`, can not use `BrowserWindow.webContents.openDevTools()` to open DevTools. Default is `true`.
-    - `javascript` Boolean (optional) - Enables JavaScript support. Default is `true`.
-    - `plugins` Boolean (optional) - Whether plugins should be enabled. Default is `false`.
-    - `minimumFontSize` Integer (optional) - Defaults to `0`.
-    - `zoomFactor` Number (optional) - The default zoom factor of the page, `3.0` represents `300%`. Default is `1.0`.
-<!-- 
+  - `webPreferences` Object (optional) - Settings of web page's features. - `devTools` Boolean (optional) - Whether to enable DevTools. If it is set to `false`, can not use `BrowserWindow.webContents.openDevTools()` to open DevTools. Default is `true`. - `javascript` Boolean (optional) - Enables JavaScript support. Default is `true`. - `plugins` Boolean (optional) - Whether plugins should be enabled. Default is `false`. - `minimumFontSize` Integer (optional) - Defaults to `0`. - `zoomFactor` Number (optional) - The default zoom factor of the page, `3.0` represents `300%`. Default is `1.0`.
+    <!--
   - `nodeIntegration` Boolean (optional) - Whether node integration is enabled. Default is `true`.
   - `nodeIntegrationInWorker` Boolean (optional) - Whether node integration is enabled in web workers. Default is `false`. More about this can be found in [Multithreading](../tutorial/multithreading.md).
   - `preload` String (optional) - Specifies a script that will be loaded before other scripts run in the page. This script will always have access to node APIs no matter whether node integration is turned on or off. The value should be the absolute file path to the script. When node integration is turned off, the preload script can reintroduce Node global symbols back to the global scope. See example [here](process.md#event-loaded).
@@ -162,8 +158,7 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
   - `webviewTag` Boolean (optional) - Whether to enable the [`<webview>` tag](webview-tag.md). Defaults to the value of the `nodeIntegration` option. **Note:** The `preload` script configured for the `<webview>` will have node integration enabled when it is executed so you should ensure remote/untrusted content is not able to create a `<webview>` tag with a possibly malicious `preload` script. You can use the `will-attach-webview` event on [webContents](web-contents.md) to strip away the `preload` script and to validate or alter the `<webview>`'s initial settings.
   - `additionalArguments` String[](optional) - A list of strings that will be appended to `process.argv` in the renderer process of this app. Useful for passing small bits of data down to renderer process preload scripts.
   - `safeDialogs` Boolean (optional) - Whether to enable browser style consecutive dialog protection. Default is `false`.
-  - `safeDialogsMessage` String (optional) - The message to display when consecutive dialog protection is triggered. If not defined the default message would be used, note that currently the default message is in English and not localized.
--->
+  - `safeDialogsMessage` String (optional) - The message to display when consecutive dialog protection is triggered. If not defined the default message would be used, note that currently the default message is in English and not localized. -->
 
 When setting minimum or maximum window size with `minWidth`/`maxWidth`/ `minHeight`/`maxHeight`, it only constrains the users. It won't prevent you from passing a size that does not follow size constraints to `setBounds`/`setSize` or to the constructor of `BrowserWindow`.
 
