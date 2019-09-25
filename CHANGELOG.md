@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.2.1
+
+- Fix typo
+
 ## Version 3.2.0
 
 - Fix some methods checking for the delegates' properties after rebuilding the window remotely.
