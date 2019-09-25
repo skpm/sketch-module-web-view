@@ -89,7 +89,8 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
   - `height` Integer (optional) - Window's height in pixels. Default is `600`.
   - `x` Integer (optional) (**required** if y is used) - Window's left offset from screen. Default is to center the window.
   - `y` Integer (optional) (**required** if x is used) - Window's top offset from screen. Default is to center the window.
-  - `hidesOnDeactivate` Boolean (optional) - Whether the window is removed from the screen when Sketch becomes inactive. Default is `true`
+  - `hidesOnDeactivate` Boolean (optional) - Whether the window is removed from the screen when Sketch becomes inactive. Default is `true`.
+  - `remembersWindowFrame` Boolean (optional) - Whether to remember the position and the size of the window the next time. Defaults is `false`.
   - `useContentSize` Boolean (optional) - The `width` and `height` would be used as web page's size, which means the actual window's size will include window frame's size and be slightly larger. Default is `false`.
   - `center` Boolean (optional) - Show window in the center of the screen.
   - `minWidth` Integer (optional) - Window's minimum width. Default is `0`.
