@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.2.2
+
+- Fix ghost area not draggable when no frame.
+
 ## Version 3.2.1
 
 - Fix typo
