@@ -96,6 +96,8 @@ globals:
   WKInspectorWKWebView: false
   NSString: false
   NSCharacterSet: false
+  MSTheme: false
+  NSKeyValueChangeNewKey: false
 
 rules:
   ###########
