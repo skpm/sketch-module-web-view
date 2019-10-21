@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.3.0
+
+- Add a `__skpm-light` or `__skpm-dark` class to the body depending on the Sketch's theme.
+
 ## Version 3.2.2
 
 - Fix ghost area not draggable when no frame.
