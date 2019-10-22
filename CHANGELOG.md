@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.3.1
+
+- Fix typo in theme change.
+
 ## Version 3.3.0
 
 - Add a `__skpm-light` or `__skpm-dark` class to the body depending on the Sketch's theme.
