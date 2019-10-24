@@ -29,14 +29,17 @@ browserWindow.webContents
 > Note that values passed to functions within `.executeJavaScript()` must be strings. To pass an object use `JSON.stringify()`
 >
 > For example :
->  ```js
->  let someObject = { a: "someValue", b: 5 }
->  browserWindow.webContents
->    .executeJavaScript(`someGlobalFunctionDefinedInTheWebview(${JSON.stringify(someObject)})`)
->    .then(res => {
->      // do something with the result
->    })
->  ```
+>
+> ```js
+> let someObject = { a: 'someValue', b: 5 }
+> browserWindow.webContents
+>   .executeJavaScript(
+>     `someGlobalFunctionDefinedInTheWebview(${JSON.stringify(someObject)})`
+>   )
+>   .then(res => {
+>     // do something with the result
+>   })
+> ```
 
 ## Sending a message to the WebView from another plugin or command
 
@@ -63,6 +66,8 @@ var sketch = require('sketch')
 
 browserWindow.webContents.on('nativeLog', function(s) {
   sketch.UI.message(s)
+
+  return 'result'
 })
 ```
 
@@ -78,7 +83,13 @@ window.postMessage('nativeLog', {
 
 // you can also pass multiple arguments
 window.postMessage('nativeLog', 1, 2, 3)
+
+// `window.postMessage` returns a Promis with the array of results from plugin listeners
+window.postMessage('nativeLog', 'blabla').then(res => {
+  // res === ['result']
+})
 ```
 
 ##### Note
+
 If you want to see `console.log` messages from inside your webview you can see this output from `Safari > Develop > {{Your Computer}} > {{Your Plugin}}`
