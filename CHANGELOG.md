@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.4.1
+
+- Fix `acceptsFirstMouse` for `SELECT` tag.
+
 ## Version 3.4.0
 
 - `window.postMessage` now returns a Promise with the array of results from the plugin listeners. The plugin listeners can return an object or a Promise which will get executed and its result passed down.
