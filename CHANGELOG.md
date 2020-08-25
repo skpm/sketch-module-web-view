@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.4.2
+
+- Fix `webContents.getURL()` tag.
+
 ## Version 3.4.1
 
 - Fix `acceptsFirstMouse` for `SELECT` tag.
