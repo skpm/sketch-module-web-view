@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.4.3
+
+- Fix updating the webview theme when changing system theme.
+
 ## Version 3.4.2
 
 - Fix `webContents.getURL()` tag.
