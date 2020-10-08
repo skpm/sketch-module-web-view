@@ -1,5 +1,7 @@
+/// <reference types="sketch-app-types" />
 declare module "sketch-module-web-view" {
   import { EventEmitter } from "events";
+  import { Document } from "sketch/dom";
 
   export interface WebPreferences {
     /**
@@ -125,7 +127,7 @@ declare module "sketch-module-web-view" {
     frame?: boolean;
 
     /** Specify parent Document. Default is `null`. */
-    parent?: unknown;
+    parent?: Document | null;
 
     /**
      * Whether this is a modal window. This only works when the window is a
