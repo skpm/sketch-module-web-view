@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "types": "./type.d.ts",
   "dependencies": {
-    "mocha-js-delegate": "^0.2.0"
+    "mocha-js-delegate": "^0.2.0",
+    "sketch-app-types": "^0.1.1"
   },
   "devDependencies": {
     "@skpm/test-runner": "^0.4.0",
