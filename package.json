@@ -16,8 +16,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "lint-staged": "^8.1.5",
     "pre-commit": "^1.2.2",
-    "prettier": "^1.17.0",
-    "sketch-app-types": "^0.1.1"
+    "prettier": "^1.17.0"
   },
   "scripts": {
     "test": "npm run lint && skpm-test",
