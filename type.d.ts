@@ -125,7 +125,7 @@ declare module "sketch-module-web-view" {
     frame?: boolean;
 
     /** Specify parent Document. Default is `null`. */
-    parent?: unknown;
+    parent?: any;
 
     /**
      * Whether this is a modal window. This only works when the window is a
