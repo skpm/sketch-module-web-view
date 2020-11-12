@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.5.0
+
+- Fix a memory leak when closing the webview.
+
 ## Version 3.4.4
 
 - Add TypeScript definitions.
