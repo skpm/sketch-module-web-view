@@ -150,7 +150,7 @@ contents
     'fetch("https://jsonplaceholder.typicode.com/users/1").then(resp => resp.json())',
     true
   )
-  .then(result => {
+  .then((result) => {
     console.log(result) // Will be the JSON object from the fetch call
   })
 ```

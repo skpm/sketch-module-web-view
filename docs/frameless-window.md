@@ -90,8 +90,7 @@ By default, the frameless window is non-draggable. Apps need to specify the attr
 To make the whole window draggable, you can add `data-app-region="drag"` as `body`'s attribute:
 
 ```html
-<body data-app-region="drag">
-</body>
+<body data-app-region="drag"></body>
 ```
 
 ## Text selection

@@ -22,7 +22,7 @@ document.addEventListener('click', interceptClickEvent)
 2. In the Sketch Plugin - handle the click:
 
 ```js
-webview.webContent.on('externalLinkClicked', url => {
+webview.webContent.on('externalLinkClicked', (url) => {
   NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString(url))
 })
 ```

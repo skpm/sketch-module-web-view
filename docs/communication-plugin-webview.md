@@ -11,7 +11,7 @@ To do so, you need to define a global function in the WebView that you will call
 On the WebView:
 
 ```js
-window.someGlobalFunctionDefinedInTheWebview = function(arg) {
+window.someGlobalFunctionDefinedInTheWebview = function (arg) {
   console.log(arg)
 }
 ```
@@ -21,7 +21,7 @@ On the plugin:
 ```js
 browserWindow.webContents
   .executeJavaScript('someGlobalFunctionDefinedInTheWebview("hello")')
-  .then(res => {
+  .then((res) => {
     // do something with the result
   })
 ```
@@ -36,7 +36,7 @@ browserWindow.webContents
 >   .executeJavaScript(
 >     `someGlobalFunctionDefinedInTheWebview(${JSON.stringify(someObject)})`
 >   )
->   .then(res => {
+>   .then((res) => {
 >     // do something with the result
 >   })
 > ```
@@ -64,7 +64,7 @@ On the plugin:
 ```js
 var sketch = require('sketch')
 
-browserWindow.webContents.on('nativeLog', function(s) {
+browserWindow.webContents.on('nativeLog', function (s) {
   sketch.UI.message(s)
 
   return 'result'
@@ -85,7 +85,7 @@ window.postMessage('nativeLog', {
 window.postMessage('nativeLog', 1, 2, 3)
 
 // `window.postMessage` returns a Promis with the array of results from plugin listeners
-window.postMessage('nativeLog', 'blabla').then(res => {
+window.postMessage('nativeLog', 'blabla').then((res) => {
   // res === ['result']
 })
 ```

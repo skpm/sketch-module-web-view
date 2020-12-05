@@ -23,7 +23,7 @@ _The version 2.x is only compatible with Sketch >= 51. If you need compatibility
 ```js
 import BrowserWindow from 'sketch-module-web-view'
 
-export default function() {
+export default function () {
   const options = {
     identifier: 'unique.id',
   }
