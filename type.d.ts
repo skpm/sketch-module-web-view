@@ -322,7 +322,7 @@ declare module "sketch-module-web-view" {
     constructor(options?: BrowserWindowOptions);
 
     /** Return window with the given id */
-    static fromId(id: number): BrowserWindow;
+    static fromId(id: string): BrowserWindow;
 
     /**
      * A `WebContents` object this window owns. All web page related events and
@@ -331,7 +331,7 @@ declare module "sketch-module-web-view" {
     webContents: WebContents;
 
     /** An integer representing the unique ID of the window. */
-    id: number;
+    id: string;
 
     /**
      * Force closing the window, the `unload` and `beforeunload` event won't be
