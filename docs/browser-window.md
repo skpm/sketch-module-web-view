@@ -85,6 +85,7 @@ It creates a new `BrowserWindow` with native properties as set by the `options`.
 ### `new BrowserWindow([options])`
 
 - `options` Object (optional)
+  - `identifier` String (optional) - Window's unique id. Default is newly generated UUID.
   - `width` Integer (optional) - Window's width in pixels. Default is `800`.
   - `height` Integer (optional) - Window's height in pixels. Default is `600`.
   - `x` Integer (optional) (**required** if y is used) - Window's left offset from screen. Default is to center the window.
@@ -326,7 +327,7 @@ Returns `BrowserWindow | null` - The window that owns the given `browserView`. I
 
 #### `BrowserWindow.fromId(id)`
 
-- `id` Integer
+- `id` String
 
 Returns `BrowserWindow` - The window with the given `id`.
 
@@ -419,7 +420,7 @@ See the [`webContents` documentation](web-contents.md) for its methods and event
 
 #### `win.id`
 
-A `Integer` representing the unique ID of the window.
+A `String` representing the unique ID of the window.
 
 ### Instance Methods
 
