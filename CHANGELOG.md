@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 3.5.1
+
+- Revert 3.5.0 because it's crashing on macOS 11.0.
+
 ## Version 3.5.0
 
 - Fix a memory leak when closing the webview.
