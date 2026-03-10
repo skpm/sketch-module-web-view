@@ -2,7 +2,7 @@
 var threadDictionary = NSThread.mainThread().threadDictionary()
 
 module.exports.getWebview = function (identifier) {
-  return require('./lib').fromId(identifier) // eslint-disable-line
+  return require('./lib').fromId(identifier)
 }
 
 module.exports.isWebviewPresent = function isWebviewPresent(identifier) {
