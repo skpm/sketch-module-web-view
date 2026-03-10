@@ -8,19 +8,16 @@
     "mocha-js-delegate": "^0.2.0"
   },
   "devDependencies": {
-    "@skpm/test-runner": "^0.4.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.2.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-prettier": "^3.0.1",
-    "lint-staged": "^8.1.5",
-    "pre-commit": "^1.2.2",
-    "prettier": "^1.17.0"
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^9.39.4",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "lint-staged": "^16.3.3",
+    "prettier": "^3.8.1"
   },
   "scripts": {
-    "test": "npm run lint && skpm-test",
-    "test:watch": "skpm-test --watch",
+    "test": "npm run lint",
     "lint": "find . -name \"*.js\" | grep -v -f .gitignore | xargs eslint",
     "prettier:base": "prettier --write",
     "prettify": "find . -name \"*.js\" | grep -v -f .gitignore | xargs npm run prettier:base",
